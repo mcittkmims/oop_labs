@@ -34,7 +34,7 @@ public class Writer {
             AliensWrapper wrapper = new AliensWrapper(universe.getName(), universe.population(aliens));
             try {
                 objectMapper.writeValue(new File(filePath + "/" + universe.getName().toLowerCase() + ".json"), wrapper);
-                System.out.println("HitchHiker Aliens teleported to " + filePath + "/" + universe.getName().toLowerCase() + ".json");
+                System.out.println(universe.getName().toUpperCase()+ " Aliens teleported to " + filePath + "/" + universe.getName().toLowerCase() + ".json");
             } catch (IOException e) {
                 e.printStackTrace();
             }
