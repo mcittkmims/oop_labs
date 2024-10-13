@@ -38,11 +38,11 @@ public class Alien {
         this.id = id;
     }
 
-    public boolean isHumanoid() {
+    public Boolean isHumanoid() {
         return isHumanoid;
     }
 
-    public void setHumanoid(boolean humanoid) {
+    public void setHumanoid(Boolean humanoid) {
         isHumanoid = humanoid;
     }
 
@@ -54,11 +54,11 @@ public class Alien {
         this.planet = planet;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

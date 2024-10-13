@@ -29,7 +29,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>com.classification.Main</mainClass> <!-- Specify your main class here -->
+                    <mainClass>com.classification.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

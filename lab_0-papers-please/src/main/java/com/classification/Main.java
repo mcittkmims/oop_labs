@@ -14,9 +14,24 @@ public class Main {
         
         List<Alien> aliens = reader.readFile(); 
 
-        // Print the list of aliens
+        // Print the ID
         for (Alien alien : aliens) {
-            System.out.println(alien);
+            System.out.println(alien.getId());
+        }
+
+        //Print the Planet
+        for (Alien alien : aliens) {
+            System.out.println(alien.getPlanet());
+        }
+
+        //Print the age
+        for (Alien alien : aliens) {
+            System.out.println(alien.getAge());
+        }
+        
+        //Print the traits
+        for (Alien alien : aliens) {
+            System.out.println(alien.getTraits());
         }
     }
 }
