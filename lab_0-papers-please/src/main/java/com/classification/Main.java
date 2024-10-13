@@ -37,7 +37,7 @@ public class Main {
         Race betelgeusianRace = new Race("Betelgeusian", true, "Betelgeuse", 100, Arrays.asList("EXTRA_ARMS", "EXTRA_HEAD"));
         Race vogonsRace = new Race("Vogons", false, "Vogsphere", 200, Arrays.asList("GREEN", "BULKY"));
         // Hitchhiker's Universe
-        Universe hitchhikersUniverse = new Universe("hitchhikers", Arrays.asList(betelgeusianRace, vogonsRace));
+        Universe hitchhikersUniverse = new Universe("hitchHiker", Arrays.asList(betelgeusianRace, vogonsRace));
 
 
         // Lord of the Rings Races
@@ -46,16 +46,17 @@ public class Main {
         // Lord of the Rings Universe
         Universe lordOfTheRingsUniverse = new Universe("rings", Arrays.asList(elfRace, dwarfRace));
 
+        // Creating a list of the universes
+        List<Universe> universes = Arrays.asList(starWarsUniverse, marvelUniverse, hitchhikersUniverse, lordOfTheRingsUniverse);
+
         // Creating a multiverse teleporter
-        Teleporter multiVerseTeleporter = new Teleporter(aliens,
-                Arrays.asList(starWarsUniverse, marvelUniverse, hitchhikersUniverse, lordOfTheRingsUniverse));
+        Teleporter multiVerseTeleporter = new Teleporter(aliens, universes);
+        
         // Teleporting everyone (get ready for impact)
         multiVerseTeleporter.teleport();
-
-
-
+  
         //Writer object
-        Writer writer = new Writer(aliens);
+        Writer writer = new Writer(aliens, universes);
         writer.writeToJson("output");
 
 
