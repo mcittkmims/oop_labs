@@ -9,6 +9,7 @@ public class Universe {
     private String name;
     private List<Race> races;
 
+    // Constructor
     public Universe(String name, List<Race> races) {
         this.name = name;
         this.races = races;
@@ -27,5 +28,9 @@ public class Universe {
         return false;
     }
 
+    // Getters
+    public String getName() {
+        return this.name;
+    }
 
 }

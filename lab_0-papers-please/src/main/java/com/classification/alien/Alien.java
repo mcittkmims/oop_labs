@@ -101,6 +101,8 @@ public class Alien {
                 ", planet='" + planet + '\'' +
                 ", age=" + age +
                 ", traits=" + traits +
+                ", race=" + race +
+                ", universe=" + universe +
                 '}';
     }
 }

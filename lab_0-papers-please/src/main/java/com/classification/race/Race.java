@@ -11,6 +11,7 @@ public class Race {
     private int age;
     private List<String> traits;
 
+    // Constructor
     public Race(String name, boolean isHumanoid, String planet,int age, List<String> traits) {
         this.name = name;
         this.isHumanoid = isHumanoid;
