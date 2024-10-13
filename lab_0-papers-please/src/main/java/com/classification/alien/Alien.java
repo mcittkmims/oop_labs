@@ -77,6 +77,22 @@ public class Alien {
         this.traits = traits;
     }
 
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public String getRace() {
+        return this.race;
+    }
+
+    public void setUniverse(String universe) {
+        this.universe = universe;
+    }
+
+    public String getUniverse() {
+        return this.universe;
+    }
+
     @Override
     public String toString() {
         return "Alien{" +

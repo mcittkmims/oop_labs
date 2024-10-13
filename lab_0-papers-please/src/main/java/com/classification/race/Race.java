@@ -8,16 +8,14 @@ public class Race {
     private String name;
     private boolean isHumanoid;
     private String planet;
-    private int minAge;
-    private int maxAge;
+    private int age;
     private List<String> traits;
 
-    public Race(String name, boolean isHumanoid, String planet, int minAge, int maxAge, List<String> traits) {
+    public Race(String name, boolean isHumanoid, String planet,int age, List<String> traits) {
         this.name = name;
         this.isHumanoid = isHumanoid;
         this.planet = planet;
-        this.minAge = minAge;
-        this.maxAge = maxAge;
+        this.age = age;
         this.traits = traits;
     }
 
@@ -32,10 +30,14 @@ public class Race {
         //Matching the race to the alien
         boolean isHumanoidMatch = (isHumanoid == null || isHumanoid == this.isHumanoid);
         boolean planetMatch = (planet == null || planet.equals(this.planet));
-        boolean ageMatch = (age == null || (age >= this.minAge && age <= this.maxAge));
+        boolean ageMatch = (age == null || age <= this.age);
         boolean traitsMatch = (traits == null || this.traits.containsAll(traits));
 
         return isHumanoidMatch && planetMatch && ageMatch && traitsMatch;
     }
-
+    
+    // Getters
+    public String getName() {
+        return this.name;
+    }
 }

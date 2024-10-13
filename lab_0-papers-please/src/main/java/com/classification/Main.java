@@ -15,8 +15,8 @@ public class Main {
         Reader reader = new Reader(fixedFilePath);
         
         //Creating a race for test
-        Race betelgeusianRace = new Race("Betelgeusian", true, "Betelgeuse",0,100,Arrays.asList("EXTRA_ARMS", "EXTRA_HEAD"));
-        Race vogonsRace = new Race("Vogons", false, "Vogsphere", 0, 200, Arrays.asList("GREEN", "BULKY"));
+        Race betelgeusianRace = new Race("Betelgeusian", true, "Betelgeuse",100,Arrays.asList("EXTRA_ARMS", "EXTRA_HEAD"));
+        Race vogonsRace = new Race("Vogons", false, "Vogsphere", 200, Arrays.asList("GREEN", "BULKY"));
         
         List<Alien> aliens = reader.readFile(); 
 
