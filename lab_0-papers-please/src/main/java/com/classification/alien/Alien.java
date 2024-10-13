@@ -7,11 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Alien {
+    // The same attributes as in JSON to be able to map the JSON into an alien
     private int id;
     private Boolean isHumanoid;
     private String planet;
     private Integer age;
     private List<String> traits;
+
+    // The race and universe will be attributed by classification
+    private String race;
+    private String universe;
 
 
     // Constructor with @JsonCreator
@@ -26,12 +31,14 @@ public class Alien {
         this.isHumanoid = isHumanoid;
         this.planet = planet;
         this.age = age;
-        this.traits = traits; 
+        this.traits = traits;
+        this.race = "";
+        this.universe = "";
     }
 
     // Getters and Setters
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -39,15 +46,15 @@ public class Alien {
     }
 
     public Boolean isHumanoid() {
-        return isHumanoid;
+        return this.isHumanoid;
     }
 
     public void setHumanoid(Boolean humanoid) {
-        isHumanoid = humanoid;
+        this.isHumanoid = humanoid;
     }
 
     public String getPlanet() {
-        return planet;
+        return this.planet;
     }
 
     public void setPlanet(String planet) {
@@ -55,7 +62,7 @@ public class Alien {
     }
 
     public Integer getAge() {
-        return age;
+        return this.age;
     }
 
     public void setAge(Integer age) {
@@ -63,7 +70,7 @@ public class Alien {
     }
 
     public List<String> getTraits() {
-        return traits;
+        return this.traits;
     }
 
     public void setTraits(List<String> traits) {

@@ -5,7 +5,7 @@ public class AlienData {
     private List<Alien> data;
 
     public List<Alien> getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(List<Alien> data) {
