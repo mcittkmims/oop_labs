@@ -1,10 +1,11 @@
 package com.classification; 
 
 import com.classification.alien.*;
-import com.classification.io.Reader;
+import com.classification.io.*;
 import com.classification.race.Race;
 import com.classification.universe.Universe;
 import com.classification.teleporter.Teleporter;
+
 
 import java.util.List;
 import java.util.Arrays;
@@ -51,12 +52,13 @@ public class Main {
         // Teleporting everyone (get ready for impact)
         multiVerseTeleporter.teleport();
 
-        // Printing the result
-        for (Alien alien : aliens) {
-            System.out.println(alien);
-        }
 
-        
+
+        //Writer object
+        Writer writer = new Writer(aliens);
+        writer.writeToJson("output");
+
+
 
         
     }

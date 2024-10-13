@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Alien {
@@ -15,7 +16,9 @@ public class Alien {
     private List<String> traits;
 
     // The race and universe will be attributed by classification
+    @JsonIgnore
     private String race;
+    @JsonIgnore
     private String universe;
 
 
@@ -45,12 +48,13 @@ public class Alien {
         this.id = id;
     }
 
+    @JsonProperty(value = "isHumanoid")
     public Boolean isHumanoid() {
         return this.isHumanoid;
     }
 
-    public void setHumanoid(Boolean humanoid) {
-        this.isHumanoid = humanoid;
+    public void setHumanoid(Boolean isHumanoid) {
+        this.isHumanoid = isHumanoid;
     }
 
     public String getPlanet() {

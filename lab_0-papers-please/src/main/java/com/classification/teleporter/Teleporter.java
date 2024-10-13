@@ -1,7 +1,6 @@
 package com.classification.teleporter;
 
 import com.classification.alien.Alien;
-import com.classification.race.Race;
 import com.classification.universe.Universe;
 import java.util.List;
 
@@ -29,6 +28,7 @@ public class Teleporter {
                 }
             }
         }
+        System.out.println("Teleportation Completed!");
     }
 
     
