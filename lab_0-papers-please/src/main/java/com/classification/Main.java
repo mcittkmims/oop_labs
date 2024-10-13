@@ -1,15 +1,22 @@
-package com.classification;
+package com.classification; 
+
+import com.classification.alien.*;
+import com.classification.io.Reader;
+
 import java.util.List;
-import java.util.Scanner;
-
-import com.classification.aliens.Alien;
-
-import java.util.Arrays;
 
 public class Main {
-  public static void main(String[] args) {
-    Alien thor = new Alien(1,true, "Asgard",1500, Arrays.asList("BLONDE", "TALL", "MUSCULAR"));
-    System.out.println(thor);
-  }
-}
+    public static void main(String[] args) {
+       
+        String fixedFilePath = "src/main/resources/input.json"; 
+        Reader reader = new Reader(fixedFilePath); 
 
+        
+        List<Alien> aliens = reader.readFile(); 
+
+        // Print the list of aliens
+        for (Alien alien : aliens) {
+            System.out.println(alien);
+        }
+    }
+}

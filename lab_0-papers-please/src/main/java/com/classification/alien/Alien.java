@@ -1,20 +1,32 @@
-package com.classification.aliens;
+package com.classification.alien;
 import java.util.List;
+
+
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Alien {
     private int id;
-    private boolean isHumanoid;
+    private Boolean isHumanoid;
     private String planet;
-    private int age;
+    private Integer age;
     private List<String> traits;
 
-    // Constructor
-    public Alien(int id, boolean isHumanoid, String planet, int age, List<String> traits) {
+
+    // Constructor with @JsonCreator
+    @JsonCreator
+    public Alien(
+        @JsonProperty("id") int id,
+        @JsonProperty("isHumanoid") Boolean isHumanoid,
+        @JsonProperty("planet") String planet,
+        @JsonProperty("age") Integer age,
+        @JsonProperty("traits") List<String> traits) {
         this.id = id;
         this.isHumanoid = isHumanoid;
         this.planet = planet;
         this.age = age;
-        this.traits = traits;
+        this.traits = traits; 
     }
 
     // Getters and Setters
