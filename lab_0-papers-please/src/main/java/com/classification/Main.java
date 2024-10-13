@@ -2,36 +2,30 @@ package com.classification;
 
 import com.classification.alien.*;
 import com.classification.io.Reader;
+import com.classification.race.Race;
 
 import java.util.List;
+import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) {
        
         String fixedFilePath = "src/main/resources/input.json"; 
-        Reader reader = new Reader(fixedFilePath); 
-
+        Reader reader = new Reader(fixedFilePath);
+        
+        //Creating a race for test
+        Race betelgeusianRace = new Race("Betelgeusian", true, "Betelgeuse",0,100,Arrays.asList("EXTRA_ARMS", "EXTRA_HEAD"));
+        Race vogonsRace = new Race("Vogons", false, "Vogsphere", 0, 200, Arrays.asList("GREEN", "BULKY"));
         
         List<Alien> aliens = reader.readFile(); 
 
-        // Print the ID
+        // Checking if classification at Hitchhiker's Universe is correct
         for (Alien alien : aliens) {
-            System.out.println(alien.getId());
+            System.out.println(alien);
+            System.out.println("Race: " + (betelgeusianRace.isRace(alien) || vogonsRace.isRace(alien)));
         }
 
-        //Print the Planet
-        for (Alien alien : aliens) {
-            System.out.println(alien.getPlanet());
-        }
-
-        //Print the age
-        for (Alien alien : aliens) {
-            System.out.println(alien.getAge());
-        }
         
-        //Print the traits
-        for (Alien alien : aliens) {
-            System.out.println(alien.getTraits());
-        }
     }
 }
