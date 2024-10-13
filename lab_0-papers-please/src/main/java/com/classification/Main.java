@@ -1,5 +1,9 @@
+package com.classification;
 import java.util.List;
 import java.util.Scanner;
+
+import com.classification.aliens.Alien;
+
 import java.util.Arrays;
 
 public class Main {
