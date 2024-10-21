@@ -6,4 +6,4 @@ This repository contains all the labs and assignments related to Object-Oriented
 
 ## Contents
 
-- **Lab 1:** [Papers Please]
+- **Lab 0:** [Papers Please]
