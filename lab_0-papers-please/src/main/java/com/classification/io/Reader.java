@@ -8,27 +8,21 @@ import java.io.IOException;
 import java.util.List;
 
 public class Reader {
-    private String filePath;
-
-    // Constructor
-    public Reader(String filePath) {
-        this.filePath = filePath; 
-    }
+    private static ObjectMapper objectMapper = new ObjectMapper();
 
     // Method to read and parse the JSON file
-    public List<Alien> readFile() {
-        ObjectMapper objectMapper = new ObjectMapper();
+    public List<Alien> readAlienFromFile(String filePath) {
         List<Alien> aliens = null;
 
         try {
             // Read and convert the JSON to an AlienData object
             AlienData alienData = objectMapper.readValue(new File(filePath), AlienData.class);
             // Get a list of alien objects
-            aliens = alienData.getData(); 
+            aliens = alienData.getData();
         } catch (IOException e) {
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
 
-        return aliens; 
+        return aliens;
     }
 }
