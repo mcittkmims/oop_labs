@@ -52,7 +52,6 @@ public class Display {
         this.compareSize(m);
         System.out.print(" and ");
         this.compareSharpness(m);
-        
     }
 
 }
