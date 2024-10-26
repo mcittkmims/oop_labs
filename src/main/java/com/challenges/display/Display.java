@@ -58,4 +58,26 @@ public class Display {
         return this.model;
     }
 
+    // Method to determine if 2 displays are the same
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        }
+
+        if (!(compared instanceof Display)) {
+            return false;
+        }
+
+        Display comparedDisplay = (Display) compared;
+        if (this.width == comparedDisplay.width &&
+            this.height == comparedDisplay.height &&
+            this.ppi == comparedDisplay.ppi &&
+                this.model.equals(comparedDisplay.model)) {
+
+            return true;
+        }
+            
+        return false;
+
+    }
 }
