@@ -6,4 +6,5 @@ This repository contains all the labs and assignments related to Object-Oriented
 
 ## Contents
 
-- **Lab 0:** [Papers Please]
+- **Lab 0:** [Papers Please](src/main/java/com/classification)
+- **Lab 1:** [Class & Objects galore](src/main/java/com/challenges)
