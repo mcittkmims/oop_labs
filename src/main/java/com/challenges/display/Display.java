@@ -40,16 +40,26 @@ public class Display {
         }
 
         if (this.height > m.height) {
-            System.out.print(" taller than " + m.model);
+            System.out.println(" taller than " + m.model);
         } else if (this.height > m.height) {
-            System.out.print(" the same height as " + m.model);
+            System.out.println(" the same height as " + m.model);
         } else {
-            System.out.print(" shorter than " + m.model);
+            System.out.println(" shorter than " + m.model);
         }
     }
 
     public void compareSharpness(Display m) {
+        if (this.ppi > m.ppi) {
+            System.out.println(this.model + " is sharper than " + m.model);
+            return;
+        }
 
+        if (this.ppi > m.ppi) {
+            System.out.println(this.model + " is less sharp than " + m.model);
+            return;
+        }
+
+        System.out.println(this.model + " has the same shrapness " + m.model);
     }
 
     public void compareWithMonitor(Display m) {
