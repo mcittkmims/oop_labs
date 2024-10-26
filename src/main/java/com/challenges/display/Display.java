@@ -54,4 +54,8 @@ public class Display {
         this.compareSharpness(m);
     }
 
+    public String getModel() {
+        return this.model;
+    }
+
 }
