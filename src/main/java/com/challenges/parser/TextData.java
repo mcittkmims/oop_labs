@@ -108,8 +108,8 @@ public class TextData {
 
     @Override
     public String toString() {
-        return this.fileName + ": "  + this.numberOfVowels + ", " + this.numberOfConsonants + ", "
-                + this.numberOfLetters + ", " + this.numberOfSentences + ", " + this.longestWord;
+        return this.fileName + " ("  + this.numberOfVowels + ", " + this.numberOfConsonants + ", "
+                + this.numberOfLetters + ", " + this.numberOfSentences + ", " + this.longestWord + "): " + this.text;
     }
 
 }

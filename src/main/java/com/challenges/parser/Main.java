@@ -2,11 +2,14 @@ package com.challenges.parser;
 
 public class Main {
     public static void main(String[] args) {
-        String path = "src/main/java/com/challenges/parser/filetext.txt";
-        String text = FileReader.readFileIntoString(path);
-        System.out.println(text);
+        if (args.length == 0) {
+            System.out.println("No arguments provided.");
+            return;
+        }
 
-        TextData input = new TextData(path, text);
-        System.out.println(input);
+        String fileText = FileReader.readFileIntoString(args[0]);
+
+        TextData textData = new TextData(args[0], fileText);
+        System.out.println(textData);
     }
 }
