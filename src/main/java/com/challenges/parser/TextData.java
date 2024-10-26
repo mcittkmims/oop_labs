@@ -13,14 +13,14 @@ public class TextData {
     public TextData(String fileName, String text) {
         this.fileName = fileName;
         this.text = text;
-        this.numberOfVowels = findVowels();
-        this.numberOfConsonants = findConsonants();
-        this.numberOfLetters = findLetters();
-        this.numberOfSentences = 
-        this.longestWord = 
+        this.numberOfVowels = findVowelCount();
+        this.numberOfConsonants = findConsonantCount();
+        this.numberOfLetters = findLetterCount();
+        this.numberOfSentences = findSentenceCount();
+        this.longestWord = findLongestWord();
     }
 
-    public int findVowels() {
+    public int findVowelCount() {
         int vowelCount = 0;
         String vowels = "aeiouAEIOU";
         for (int i = 0; i < this.text.length(); i++) {
@@ -32,7 +32,7 @@ public class TextData {
         return vowelCount;
     }
     
-    public int findConsonants() {
+    public int findConsonantCount() {
         int consonantCount = 0;
         String vowels = "aeiouAEIOU";
         for (int i = 0; i < this.text.length(); i++) {
@@ -44,7 +44,7 @@ public class TextData {
         return consonantCount;
     }
 
-    public int findLetters() {
+    public int findLetterCount() {
         int letterCount = 0;
         for (int i = 0; i < this.text.length(); i++) {
             if (Character.isLetter(this.text.charAt(i))) {
@@ -54,6 +54,29 @@ public class TextData {
         return letterCount;
     }
 
+    public int findSentenceCount() {
+        int sentenceCount = 0;
+        String[] sentences = this.text.split("[.!?]+");
+        for (String sentence : sentences) {
+            if (!sentence.isBlank()) {
+                sentenceCount++;
+            }
+        }
+        return sentenceCount;
+    }
+    
+    public String findLongestWord() {
+        int maxLength = 0;
+        String longestWord = null;
+        String[] words = this.text.split("[ .!?,\"']+");
+        for (String word : words) {
+            if (word.length() > maxLength) {
+                maxLength = word.length();
+                longestWord = word;
+            }
+        }
+        return longestWord;
+    }
 
     public String getFileName() {
         return fileName;
@@ -81,6 +104,12 @@ public class TextData {
 
     public String getLongestWord() {
         return longestWord;
+    }
+
+    @Override
+    public String toString() {
+        return this.fileName + ": "  + this.numberOfVowels + ", " + this.numberOfConsonants + ", "
+                + this.numberOfLetters + ", " + this.numberOfSentences + ", " + this.longestWord;
     }
 
 }
