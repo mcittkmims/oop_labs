@@ -20,6 +20,7 @@ public class TextData {
         this.longestWord = findLongestWord();
     }
 
+    // Method to count all voewls from text
     public int findVowelCount() {
         int vowelCount = 0;
         String vowels = "aeiouAEIOU";
@@ -32,6 +33,7 @@ public class TextData {
         return vowelCount;
     }
     
+    // Method to count all consonants from text
     public int findConsonantCount() {
         int consonantCount = 0;
         String vowels = "aeiouAEIOU";
@@ -44,6 +46,7 @@ public class TextData {
         return consonantCount;
     }
 
+    // Method to count all letters from text
     public int findLetterCount() {
         int letterCount = 0;
         for (int i = 0; i < this.text.length(); i++) {
@@ -54,9 +57,12 @@ public class TextData {
         return letterCount;
     }
 
+    // Method to count all sentences from text
     public int findSentenceCount() {
         int sentenceCount = 0;
+        // Splitting the text on punctuation signs
         String[] sentences = this.text.split("[.!?]+");
+        // Not counting empty elements
         for (String sentence : sentences) {
             if (!sentence.isBlank()) {
                 sentenceCount++;
@@ -65,6 +71,7 @@ public class TextData {
         return sentenceCount;
     }
     
+    // Method to find largest word
     public String findLongestWord() {
         int maxLength = 0;
         String longestWord = null;
