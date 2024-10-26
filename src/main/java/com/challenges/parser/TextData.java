@@ -115,8 +115,9 @@ public class TextData {
 
     @Override
     public String toString() {
-        return this.fileName + " ("  + this.numberOfVowels + ", " + this.numberOfConsonants + ", "
-                + this.numberOfLetters + ", " + this.numberOfSentences + ", " + this.longestWord + "): " + this.text;
+        return this.fileName + " ("  + this.numberOfVowels + " vowels" + ", " + this.numberOfConsonants + " consonants" + ", "
+                + this.numberOfLetters + " letters" + ", " + this.numberOfSentences + " sentences" + ", " + this.longestWord 
+                + " is longest" + "): " + this.text;
     }
 
 }

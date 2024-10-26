@@ -7,9 +7,13 @@ public class Main {
             return;
         }
 
-        String fileText = FileReader.readFileIntoString(args[0]);
+        // Loop to check each argument
+        for (String arg : args) {
+            
+            String fileText = FileReader.readFileIntoString(arg);
 
-        TextData textData = new TextData(args[0], fileText);
-        System.out.println(textData);
+            TextData textData = new TextData(arg, fileText);
+            System.out.println(textData);
+        }
     }
 }
