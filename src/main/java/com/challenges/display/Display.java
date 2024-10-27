@@ -14,22 +14,18 @@ public class Display {
     }
 
     public void compareSize(Display m) {
-        // Checks each attribute individually
-        if (this.width > m.width) {
-            System.out.print(this.model + " is longer and ");
-        } else if (this.width < m.width) {
-            System.out.print(this.model + " is narrower and ");
-        } else {
-            System.out.print(this.model + " is the same width and ");
+        int thisSize = this.width * this.height;
+        int otherSize = m.width * m.height;
+        // Check size attribute
+        if (thisSize > otherSize) {
+            System.out.print(this.model + " is bigger than " + m.model);
+            return;
         }
-
-        if (this.height > m.height) {
-            System.out.print("taller than " + m.model);
-        } else if (this.height < m.height) {
-            System.out.print("shorter than " + m.model);
-        } else {
-            System.out.print("the same height as " + m.model);
+        if (thisSize < otherSize) {
+            System.out.print(this.model + " is smaller than " + m.model);
+            return;
         }
+        System.out.print(this.model + " has the same size as " + m.model);
     }
 
     public void compareSharpness(Display m) {

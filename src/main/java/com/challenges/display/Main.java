@@ -8,14 +8,18 @@ public class Main {
         
         System.out.println("");
         samsung.compareSize(mac);
+        System.out.println("");
         mac.compareSize(acer);
+        System.out.println("");
         samsung.compareSize(acer);
+
 
         System.out.println("");       
         samsung.compareSharpness(mac);
         mac.compareSharpness(acer);
         samsung.compareSharpness(acer);
         
+
         System.out.println("");
         samsung.compareWithMonitor(mac);
         mac.compareWithMonitor(acer);

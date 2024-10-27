@@ -75,7 +75,7 @@ public class TextData {
     public String findLongestWord() {
         int maxLength = 0;
         String longestWord = null;
-        String[] words = this.text.split("[ .!?,\"']+");
+        String[] words = this.text.split("[ .!?,\"'\n]+");
         for (String word : words) {
             if (word.length() > maxLength) {
                 maxLength = word.length();
