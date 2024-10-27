@@ -10,8 +10,8 @@ public class TextData {
     private int numberOfSentences;
     private String longestWord;
 
-    public TextData(String fileName, String text) {
-        this.fileName = fileName;
+    public TextData(String path, String text) {
+        this.fileName = findFileName(path);
         this.text = text;
         this.numberOfVowels = findVowelCount();
         this.numberOfConsonants = findConsonantCount();
@@ -19,6 +19,17 @@ public class TextData {
         this.numberOfSentences = findSentenceCount();
         this.longestWord = findLongestWord();
     }
+
+    // Method to extrect file name from path
+    public static String findFileName(String path) {
+        if (path.indexOf('/') == -1) {
+            return path;
+        }
+        String[] folders = path.split("/");
+        return folders[folders.length - 1];
+        
+    }
+
 
     // Method to count all voewls from text
     public int findVowelCount() {
