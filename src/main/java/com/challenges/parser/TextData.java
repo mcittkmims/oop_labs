@@ -11,17 +11,17 @@ public class TextData {
     private String longestWord;
 
     public TextData(String path, String text) {
-        this.fileName = findFileName(path);
+        this.fileName = getFileName(path);
         this.text = text;
-        this.numberOfVowels = findVowelCount();
-        this.numberOfConsonants = findConsonantCount();
-        this.numberOfLetters = findLetterCount();
-        this.numberOfSentences = findSentenceCount();
+        this.numberOfVowels = getVowelCount();
+        this.numberOfConsonants = getConsonantCount();
+        this.numberOfLetters = getLetterCount();
+        this.numberOfSentences = getSentenceCount();
         this.longestWord = findLongestWord();
     }
 
     // Method to extrect file name from path
-    public static String findFileName(String path) {
+    public static String getFileName(String path) {
         if (path.indexOf('/') == -1) {
             return path;
         }
@@ -32,7 +32,7 @@ public class TextData {
 
 
     // Method to count all voewls from text
-    public int findVowelCount() {
+    private int getVowelCount() {
         int vowelCount = 0;
         String vowels = "aeiouAEIOU";
         for (int i = 0; i < this.text.length(); i++) {
@@ -45,7 +45,7 @@ public class TextData {
     }
     
     // Method to count all consonants from text
-    public int findConsonantCount() {
+    public int getConsonantCount() {
         int consonantCount = 0;
         String vowels = "aeiouAEIOU";
         for (int i = 0; i < this.text.length(); i++) {
@@ -58,7 +58,7 @@ public class TextData {
     }
 
     // Method to count all letters from text
-    public int findLetterCount() {
+    public int getLetterCount() {
         int letterCount = 0;
         for (int i = 0; i < this.text.length(); i++) {
             if (Character.isLetter(this.text.charAt(i))) {
@@ -69,7 +69,7 @@ public class TextData {
     }
 
     // Method to count all sentences from text
-    public int findSentenceCount() {
+    public int getSentenceCount() {
         int sentenceCount = 0;
         // Splitting the text on punctuation signs
         String[] sentences = this.text.split("[.!?]+");

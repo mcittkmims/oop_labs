@@ -14,7 +14,8 @@ public class Main {
         samsung.compareSize(acer);
 
 
-        System.out.println("");       
+        System.out.println("");
+        System.out.println("");      
         samsung.compareSharpness(mac);
         mac.compareSharpness(acer);
         samsung.compareSharpness(acer);
