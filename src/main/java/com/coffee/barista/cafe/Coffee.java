@@ -14,20 +14,20 @@ abstract class Coffee {
     }
 
     // Getters and setters
-    public Intensity getIntensity() {
+    Intensity getIntensity() {
         return intensity;
     }
 
-    public void setIntensity(Intensity intensity) {
+    void setIntensity(Intensity intensity) {
         this.intensity = intensity;
     }
     
-    public String getName() {
+    String getName() {
         return name;
     }
 
     // Print Coffee details
-    public void printDetails() {
+    void printDetails() {
         System.out.println("Coffee intensity: " + this.intensity);
     }
 

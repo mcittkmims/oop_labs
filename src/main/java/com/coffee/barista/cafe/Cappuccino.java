@@ -6,7 +6,7 @@ class Cappuccino extends Coffee {
     
     private int mlOfMilk;
 
-    public Cappuccino(Intensity intensity, int mlOfMilk) {
+    Cappuccino(Intensity intensity, int mlOfMilk) {
         super(intensity, "Cappuccino");
         this.mlOfMilk = mlOfMilk;
 
@@ -19,23 +19,23 @@ class Cappuccino extends Coffee {
     }
 
     // Getters and setters
-    public int getMlOfMilk(){
+    int getMlOfMilk(){
         return mlOfMilk;
     }
 
-    public void setMlOfMilk(int mlOfMilk) {
+    void setMlOfMilk(int mlOfMilk) {
         this.mlOfMilk = mlOfMilk;
     }
 
     // Print Cappucino Details
     @Override
-    public void printDetails() {
+    void printDetails() {
         super.printDetails();
         System.out.println("Milk: " + this.mlOfMilk + " ml");
     }
 
     // Make Cappuccino
-    public Cappuccino makeCappuccino() {
+    Cappuccino makeCappuccino() {
         super.makeCoffee();
         System.out.println("Adding " + this.mlOfMilk + " mls of milk");
         return this;

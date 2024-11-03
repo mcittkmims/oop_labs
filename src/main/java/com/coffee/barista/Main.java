@@ -90,6 +90,8 @@ public class Main {
         }
 
         System.out.println(orders);
+        System.out.println("The barista is preparing your order!!");
+        
 
     }
 
