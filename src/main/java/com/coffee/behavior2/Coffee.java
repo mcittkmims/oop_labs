@@ -1,8 +1,8 @@
-package com.coffee.behavior;
+package com.coffee.behavior2;
 
 import com.coffee.enums.Intensity;
 
-public class Coffee {
+public abstract class Coffee {
     private Intensity intensity;
     private final String name;
 
@@ -11,11 +11,6 @@ public class Coffee {
     protected Coffee(Intensity intensity, String name) {
         this.intensity = intensity;
         this.name = name;
-    }
-    
-    public Coffee(Intensity intensity) {
-        this.intensity = intensity;
-        this.name = "Coffee";
     }
 
     // Getters and setters
@@ -34,5 +29,12 @@ public class Coffee {
     // Print Coffee details
     public void printDetails() {
         System.out.println("Coffee intensity: " + this.intensity);
+    }
+
+    // Make Coffee
+    protected Coffee makeCoffee() {
+        System.out.println("Making " + this.name);
+        System.out.println("Intensity set to " + this.intensity);
+        return this;
     }
 }

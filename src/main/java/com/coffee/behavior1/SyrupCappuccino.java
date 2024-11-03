@@ -1,4 +1,4 @@
-package com.coffee.behavior;
+package com.coffee.behavior1;
 
 import com.coffee.enums.*;
 

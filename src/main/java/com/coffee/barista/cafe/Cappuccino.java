@@ -1,8 +1,8 @@
-package com.coffee.behavior;
+package com.coffee.barista.cafe;
 
 import com.coffee.enums.Intensity;
 
-public class Cappuccino extends Coffee {
+class Cappuccino extends Coffee {
     
     private int mlOfMilk;
 
@@ -32,6 +32,13 @@ public class Cappuccino extends Coffee {
     public void printDetails() {
         super.printDetails();
         System.out.println("Milk: " + this.mlOfMilk + " ml");
+    }
+
+    // Make Cappuccino
+    public Cappuccino makeCappuccino() {
+        super.makeCoffee();
+        System.out.println("Adding " + this.mlOfMilk + " mls of milk");
+        return this;
     }
 
 }
