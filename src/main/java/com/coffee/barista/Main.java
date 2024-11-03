@@ -90,8 +90,16 @@ public class Main {
         }
 
         System.out.println(orders);
+        Barista adrian = new Barista();
+        System.out.println();
         System.out.println("The barista is preparing your order!!");
-        
+        adrian.makeOrders(orders);
+
+        System.out.println("All finalized orders: ");
+        adrian.showAllOrdersDetailes();
+
+
+
 
     }
 
