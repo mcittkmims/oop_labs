@@ -13,25 +13,34 @@ public class Barista {
         this.orders = new ArrayList<>();
     }
 
+    // Method to convert the string input in a list of coffees
     public void makeOrders(String noteOfOrders) {
+        
         String[] orders = noteOfOrders.split(",");
+
         int i = 0;
         while (i < orders.length) {
+
             if (orders[i].equals("CAPPUCCINO")) {
+
                 i++;
                 Intensity intensity = Intensity.valueOf(orders[i]);
                 i++;
                 int mlOfMilk = Integer.valueOf(orders[i]);
                 this.orders.add(new Cappuccino(intensity, mlOfMilk).makeCappuccino());
                 System.out.println();
+
             } else if (orders[i].equals("AMERICANO")) {
+
                 i++;
                 Intensity intensity = Intensity.valueOf(orders[i]);
                 i++;
                 int mlOfWater = Integer.valueOf(orders[i]);
                 this.orders.add(new Americano(intensity, mlOfWater).makeAmericano());
                 System.out.println();
+
             } else if (orders[i].equals("PUMPKINSPICELATTE")) {
+
                 i++;
                 Intensity intensity = Intensity.valueOf(orders[i]);
                 i++;
@@ -39,7 +48,9 @@ public class Barista {
                 i++;
                 int mgOfPumpkinSpice = Integer.valueOf(orders[i]);
                 this.orders.add(new PumpkinSpiceLatte(intensity, mlOfMilk, mgOfPumpkinSpice).makePumpkinSpiceLatte());
+
             } else if (orders[i].equals("SYRUPCAPPUCCINO")) {
+
                 i++;
                 Intensity intensity = Intensity.valueOf(orders[i]);
                 i++;
@@ -47,13 +58,16 @@ public class Barista {
                 i++;
                 SyrupType syrup = SyrupType.valueOf(orders[i]);
                 this.orders.add(new SyrupCappuccino(intensity, mlOfMilk, syrup).makeSyrupCappuccino());
+
             }
+
             i++;
         }
 
     }
+    // Method to print each coffee individually
+    public void showAllOrdersDetails() {
 
-    public void showAllOrdersDetailes() {
         for (Coffee coffee : orders) {
             coffee.printDetails();
             System.out.println();

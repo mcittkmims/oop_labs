@@ -8,3 +8,4 @@ This repository contains all the labs and assignments related to Object-Oriented
 
 - **Lab 0:** [Papers Please](src/main/java/com/classification)
 - **Lab 1:** [Class & Objects galore](src/main/java/com/challenges)
+- **Lab 2:** [Coffee Inheritance](src/main/java/com/coffee)
