@@ -1,6 +1,6 @@
-package com.coffee.relations.classes;
+package com.coffee.behavior;
 
-import com.coffee.relations.enums.*;
+import com.coffee.enums.*;
 
 public class SyrupCappuccino extends Cappuccino{
     private SyrupType syrup;
@@ -18,5 +18,12 @@ public class SyrupCappuccino extends Cappuccino{
 
     public void setSyrup(SyrupType syrup) {
         this.syrup = syrup;
+    }
+
+    // Print Cappucino Details
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Syrup: " + this.syrup);
     }
 }

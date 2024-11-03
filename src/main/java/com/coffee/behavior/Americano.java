@@ -1,6 +1,6 @@
-package com.coffee.relations.classes;
+package com.coffee.behavior;
 
-import com.coffee.relations.enums.Intensity;
+import com.coffee.enums.Intensity;
 
 public class Americano extends Coffee{
     private int mlOfWater;
@@ -21,4 +21,11 @@ public class Americano extends Coffee{
         this.mlOfWater = mlOfWater;
     }
     
+    // Print Americano Details
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Water: " + this.mlOfWater + " ml");
+    }
+
 }

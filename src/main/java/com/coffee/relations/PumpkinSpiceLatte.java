@@ -1,6 +1,6 @@
-package com.coffee.relations.classes;
+package com.coffee.relations;
 
-import com.coffee.relations.enums.Intensity;
+import com.coffee.enums.Intensity;
 
 public class PumpkinSpiceLatte extends Cappuccino{
 

@@ -1,4 +1,4 @@
-package com.coffee.relations.enums;
+package com.coffee.enums;
 
 public enum Intensity {
     LIGHT,
