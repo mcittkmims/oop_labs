@@ -6,20 +6,16 @@ public class Cappuccino extends Coffee {
     
     private int mlOfMilk;
 
-    public Cappuccino(Intensity intensity, int mlOfMilk) {
-        super(intensity, "Cappuccino");
-        this.mlOfMilk = mlOfMilk;
+    private final String name = "Cappuccino";
 
-    }
-    
-    protected Cappuccino(Intensity intensity, int mlOfMilk, String name) {
-        super(intensity, name);
+    public Cappuccino(Intensity intensity, int mlOfMilk) {
+        super(intensity);
         this.mlOfMilk = mlOfMilk;
 
     }
 
     // Getters and setters
-    public int getMlOfMilk(){
+    public int getMlOfMilk() {
         return mlOfMilk;
     }
 

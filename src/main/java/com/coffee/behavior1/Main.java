@@ -6,8 +6,11 @@ public class Main {
         SyrupCappuccino syrupCappuccino = new SyrupCappuccino(Intensity.NORMAL, 50, SyrupType.CARAMEL);
         Cappuccino cappuccino = new Cappuccino(Intensity.LIGHT, 20);
         Americano americano = new Americano(Intensity.STRONG, 100);
+        System.out.println();
         syrupCappuccino.printDetails();
+        System.out.println();
         cappuccino.printDetails();
+        System.out.println();
         americano.printDetails();
     }
 }

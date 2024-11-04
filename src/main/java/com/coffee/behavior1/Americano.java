@@ -6,9 +6,8 @@ public class Americano extends Coffee{
     private int mlOfWater;
     private final String name = "Americano";
 
-
     public Americano(Intensity intensity, int mlOfWater) {
-        super(intensity, "Americano");
+        super(intensity);
         this.mlOfWater = mlOfWater;
 
     }
@@ -21,7 +20,7 @@ public class Americano extends Coffee{
     public void setMlOfWater(int mlOfWater) {
         this.mlOfWater = mlOfWater;
     }
-    
+
     // Print Americano Details
     @Override
     public void printDetails() {

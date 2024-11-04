@@ -21,13 +21,11 @@ public class SyrupCappuccino extends Cappuccino {
     }
 
     // Print Cappucino Details
-    @Override
     public void printDetails() {
         super.printDetails();
         System.out.println("Syrup: " + this.syrup);
     }
 
-    @Override
     public Cappuccino makeCappuccino() {
         makeCoffee();
         System.out.println("Adding " + this.getMlOfMilk() + " mls of milk");

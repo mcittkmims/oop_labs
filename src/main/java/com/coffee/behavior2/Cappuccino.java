@@ -24,13 +24,12 @@ public class Cappuccino extends Coffee {
     }
 
     // Print Cappucino Details
-    @Override
     public void printDetails() {
         super.printDetails();
         System.out.println("Milk: " + this.mlOfMilk + " ml");
     }
 
-    @Override
+
     protected Coffee makeCoffee() {
         System.out.println("Intensity set to " + this.getIntensity());
         return this;

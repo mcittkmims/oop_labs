@@ -22,13 +22,12 @@ public class PumpkinSpiceLatte extends Cappuccino {
     }
 
     // Print Cappucino Details
-    @Override
     public void printDetails() {
         super.printDetails();
         System.out.println("PumpkinSpice: " + this.mgOfPumpkinSpice + " mg");
     }
 
-    @Override
+
     public Cappuccino makeCappuccino() {
         super.makeCoffee();
         System.out.println("Adding " + this.getMlOfMilk() + " mls of milk");
