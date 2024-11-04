@@ -5,9 +5,10 @@ import com.coffee.enums.Intensity;
 public class PumpkinSpiceLatte extends Cappuccino{
 
     private int mgOfPumpkinSpice;
+    private final String name = "PumpkinSpiceLatte";
 
     public PumpkinSpiceLatte(Intensity intensity, int mlOfMilk, int mgOfPumpkinSpice) {
-        super(intensity, mlOfMilk, "PumpkinSpiceLatte");
+        super(intensity, mlOfMilk);
         this.mgOfPumpkinSpice = mgOfPumpkinSpice;
     }
 
