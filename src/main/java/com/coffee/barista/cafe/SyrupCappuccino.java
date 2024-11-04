@@ -4,10 +4,11 @@ import com.coffee.enums.*;
 
 public class SyrupCappuccino extends Cappuccino{
     private SyrupType syrup;
+    private final String name = "SyrupCappuccin";
 
     
     SyrupCappuccino(Intensity intensity, int mlOfMilk, SyrupType syrup) {
-        super(intensity, mlOfMilk, "SyrupCappuccino");
+        super(intensity, mlOfMilk);
         this.syrup = syrup;
     }
     
@@ -27,9 +28,17 @@ public class SyrupCappuccino extends Cappuccino{
         System.out.println("Syrup: " + this.syrup);
     }
 
+    @Override
+    Cappuccino makeCappuccino() {
+        makeCoffee();
+        System.out.println("Adding " + this.getMlOfMilk() + " mls of milk");
+        return this;
+    }
+
     // Make SyrupCappuccino
     SyrupCappuccino makeSyrupCappuccino() {
-        super.makeCappuccino();
+        System.out.println("Making " + this.name);
+        makeCappuccino();
         System.out.println("Adding " + this.syrup + " syrup");
         return this;
     }
