@@ -22,7 +22,6 @@ public class PumpkinSpiceLatte extends Cappuccino{
     
 
     // Print Cappucino Details
-    @Override
     public void printDetails() {
         super.printDetails();
         System.out.println("PumpkinSpice: " + this.mgOfPumpkinSpice + " mg");
