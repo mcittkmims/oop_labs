@@ -4,13 +4,10 @@ import com.coffee.enums.Intensity;
 
 public abstract class Coffee {
     private Intensity intensity;
-    private final String name;
+    private final String name = "Coffee";
 
-    
-
-    protected Coffee(Intensity intensity, String name) {
+    protected Coffee(Intensity intensity) {
         this.intensity = intensity;
-        this.name = name;
     }
 
     // Getters and setters
@@ -21,7 +18,7 @@ public abstract class Coffee {
     public void setIntensity(Intensity intensity) {
         this.intensity = intensity;
     }
-    
+
     public String getName() {
         return name;
     }

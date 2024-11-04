@@ -4,6 +4,7 @@ import com.coffee.enums.Intensity;
 
 public class Americano extends Coffee{
     private int mlOfWater;
+    private final String name = "Americano";
 
 
     public Americano(Intensity intensity, int mlOfWater) {
