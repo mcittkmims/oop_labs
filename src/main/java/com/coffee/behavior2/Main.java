@@ -7,10 +7,18 @@ public class Main {
         Coffee cappuccino = new Cappuccino(Intensity.LIGHT, 20).makeCappuccino();
         Coffee americano = new Americano(Intensity.STRONG, 100).makeAmericano();
         System.out.println();
-        ((SyrupCappuccino) syrupCappuccino).printDetails();
+        if (syrupCappuccino instanceof SyrupCappuccino) {
+            ((SyrupCappuccino) syrupCappuccino).printDetails();
+        }
+            
         System.out.println();
-        ((Cappuccino) cappuccino).printDetails();
+        if (cappuccino instanceof Americano) {
+            ((Cappuccino) cappuccino).printDetails();
+        }
         System.out.println();
-        ((Americano) americano).printDetails();
+
+        if (americano instanceof SyrupCappuccino) {
+            ((Americano) americano).printDetails();
+        }
     }
 }
