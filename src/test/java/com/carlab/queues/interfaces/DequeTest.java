@@ -1,9 +1,12 @@
-package com.carlab.queues;
+package com.carlab.queues.interfaces;
 
 import org.junit.jupiter.api.Test;
+
+import com.carlab.queues.DoubleQueue;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class IDequeTest {
+public class DequeTest {
 
     @Test
     public void testDoubleEndedOperations() {

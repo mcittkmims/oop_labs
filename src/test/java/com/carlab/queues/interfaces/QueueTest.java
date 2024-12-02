@@ -1,9 +1,14 @@
-package com.carlab.queues;
+package com.carlab.queues.interfaces;
 
 
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+
+
+import com.carlab.queues.LinearQueue;
+import com.carlab.queues.CircularQueue;
+import com.carlab.queues.DoubleQueue;
 
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.stream.Stream;

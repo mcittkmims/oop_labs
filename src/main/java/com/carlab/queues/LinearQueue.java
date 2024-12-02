@@ -3,6 +3,8 @@ package com.carlab.queues;
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
+import com.carlab.queues.interfaces.IQueue;
+
 public class LinearQueue<T> implements IQueue<T> {
     private LinkedList<T> list; 
 

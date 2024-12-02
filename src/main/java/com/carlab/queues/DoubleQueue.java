@@ -2,6 +2,8 @@ package com.carlab.queues;
 
 import java.util.LinkedList;
 
+import com.carlab.queues.interfaces.IDoubleQueue;
+
 public class DoubleQueue<T> implements IDoubleQueue<T> {
     private LinkedList<T> deque = new LinkedList<>();
 
