@@ -15,7 +15,8 @@ public class QueueTest {
     private Stream<IQueue<String>> queueProvider() {
         return Stream.of(
                 new LinearQueue<>(), 
-                new CircularQueue<>(5) 
+                new CircularQueue<>(5),
+                new DoubleQueue<>()        
         );
     }
 
