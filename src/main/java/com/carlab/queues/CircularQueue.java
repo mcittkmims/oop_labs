@@ -1,8 +1,8 @@
 package com.carlab.queues;
 
-import com.carlab.queues.interfaces.IQueue;
+import com.carlab.queues.interfaces.Queue;
 
-public class CircularQueue<T> implements IQueue<T> {
+public class CircularQueue<T> implements Queue<T> {
     private final T[] data; 
     private final int capacity; 
     private int front; 

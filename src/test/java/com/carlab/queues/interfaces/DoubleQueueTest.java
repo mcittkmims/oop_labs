@@ -10,7 +10,7 @@ public class DoubleQueueTest {
 
     @Test
     public void testDoubleEndedOperations() {
-        IDoubleQueue<String> deque = new DoubleQueue<>();
+        DoubleQueue<String> deque = new DoubleQueue<>();
 
         // Test enqueueFront and dequeueRear
         deque.enqueueFront("A");

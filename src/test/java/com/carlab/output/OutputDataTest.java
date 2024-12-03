@@ -3,6 +3,7 @@ package com.carlab.output;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.carlab.car.Car;
 import com.carlab.service.ElectricStation;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -112,10 +113,10 @@ public class OutputDataTest {
 
         assertEquals(0, OutputData.getElectricCount());
 
-        station1.refuel("Car1");
+        station1.refuel(new Car(1,null,null,false,0));
         assertEquals(1, OutputData.getElectricCount(), "Electric count should be incremented by station1");
 
-        station2.refuel("Car2");
+        station2.refuel(new Car(2, null, null, false, 0));
         assertEquals(2, OutputData.getElectricCount(), "Electric count should be incremented by station2");
     }
 }

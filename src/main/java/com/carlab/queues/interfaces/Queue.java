@@ -1,6 +1,6 @@
 package com.carlab.queues.interfaces;
 
-public interface IQueue<T> {
+public interface Queue<T> {
     void enqueue(T item); 
 
     T dequeue(); 

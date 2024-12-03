@@ -16,8 +16,8 @@ import java.util.stream.Stream;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS) 
 public class QueueTest {
 
-    // Method to provide instances of different IQueue implementations
-    private Stream<IQueue<String>> queueProvider() {
+    // Method to provide instances of different Queue implementations
+    private Stream<Queue<String>> queueProvider() {
         return Stream.of(
                 new LinearQueue<>(), 
                 new CircularQueue<>(5),
@@ -27,7 +27,7 @@ public class QueueTest {
 
     @ParameterizedTest
     @MethodSource("queueProvider")
-    public void testEnqueueAndDequeue(IQueue<String> queue) {
+    public void testEnqueueAndDequeue(Queue<String> queue) {
         queue.enqueue("A");
         queue.enqueue("B");
 
@@ -37,7 +37,7 @@ public class QueueTest {
 
     @ParameterizedTest
     @MethodSource("queueProvider")
-    public void testPeek(IQueue<String> queue) {
+    public void testPeek(Queue<String> queue) {
         queue.enqueue("A");
 
         assertEquals("A", queue.peek());
@@ -46,7 +46,7 @@ public class QueueTest {
 
     @ParameterizedTest
     @MethodSource("queueProvider")
-    public void testIsEmpty(IQueue<String> queue) {
+    public void testIsEmpty(Queue<String> queue) {
         assertTrue(queue.isEmpty());
 
         queue.enqueue("A");
@@ -55,7 +55,7 @@ public class QueueTest {
 
     @ParameterizedTest
     @MethodSource("queueProvider")
-    public void testSize(IQueue<String> queue) {
+    public void testSize(Queue<String> queue) {
         assertEquals(0, queue.size());
 
         queue.enqueue("A");
