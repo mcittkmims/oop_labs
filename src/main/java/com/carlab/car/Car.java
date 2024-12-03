@@ -14,4 +14,7 @@ public class Car {
         this.isDining = isDining;
         this.consumption = consumption;
     }
+
+    public Car() {
+    }
 }

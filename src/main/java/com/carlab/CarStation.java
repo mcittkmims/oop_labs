@@ -1,4 +1,4 @@
-package com.carlab.station;
+package com.carlab;
 
 import com.carlab.car.Car;
 import com.carlab.output.OutputData;
@@ -8,7 +8,7 @@ import com.carlab.service.interfaces.Refuelable;
 
 public class CarStation {
     private Dineable diningService;
-    Refuelable refuelingService;
+    private Refuelable refuelingService;
     private Queue<Car> queue;
 
     public CarStation(Dineable diningService, Refuelable refuelingService, Queue<Car> queue) {
@@ -35,4 +35,18 @@ public class CarStation {
     public void addCar(Car car) {
         queue.enqueue(car);
     }
+
+    
+    public int getWaitingSize() {
+        return queue.size();
+    }
+
+    public Dineable getDiningService() {
+        return diningService;
+    }
+
+    public Refuelable getRefuelingService() {
+        return refuelingService;
+    }
+
 }

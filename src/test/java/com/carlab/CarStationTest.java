@@ -1,5 +1,4 @@
-package com.carlab.station;
-
+package com.carlab;
 import com.carlab.car.Car;
 import com.carlab.car.FuelType;
 import com.carlab.car.PassengerType;
