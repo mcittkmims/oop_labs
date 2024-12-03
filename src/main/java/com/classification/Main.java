@@ -52,7 +52,7 @@ public class Main {
 
         // Writer object
         Writer writer = new Writer(aliens, universes);
-        writer.writeToJson("output");
+        writer.writeToJson("src/main/java/com/classification/output");
 
     }
 }
