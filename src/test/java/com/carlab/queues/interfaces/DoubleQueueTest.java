@@ -6,7 +6,7 @@ import com.carlab.queues.DoubleQueue;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DequeTest {
+public class DoubleQueueTest {
 
     @Test
     public void testDoubleEndedOperations() {
