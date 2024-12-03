@@ -63,9 +63,18 @@ public class Semaphore {
         }
     }
     
-    public void serve(){
+    public void serve() {
         for (CarStation station : stations) {
             station.serveCars();
         }
+    }
+    
+    public boolean areWaiting() {
+        for (CarStation station : stations) {
+            if (station.getWaitingSize() > 0) {
+                return true;
+            }
+        }
+        return false;
     }
 }

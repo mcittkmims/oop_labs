@@ -126,8 +126,8 @@ public class OutputData {
         System.out.println("DINING: " + diningCount);
         System.out.println("NOT_DINING: " + notDiningCount);
         System.out.println("CONSUMPTION:");
-        System.out.println("\t\tGAS: " + gasConsumption);
-        System.out.println("\t\tELECTRIC: " + electricConsumption);
+        System.out.println("\tELECTRIC: " + electricConsumption);
+        System.out.println("\tGAS: " + gasConsumption);
     }
 
 }
